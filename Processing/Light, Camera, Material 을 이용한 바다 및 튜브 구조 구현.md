@@ -1,6 +1,6 @@
 # Light Camera, Material 을 이용한 바다 및 튜브 구조 구현
 
-### 조원 :  김동해, 20191129 이주협, 20191131 이호현, 20191137 하보천, 20211110 임채하 
+### 조원 :  20191118 김동해, 20191129 이주협, 20191131 이호현, 20191137 하보천, 20211110 임채하 
 
 ## 소스파일
 ```
@@ -104,7 +104,7 @@ function touchEnded() {
 ## 설명
 기존 terrain 코드에 여러가지 변형을 주었다. 우선 cols,rows,scl,flying 변수값을 바꾸고, noStroke()을 추가하고, background() 값과 fill() 값을 바꾸어 바다를 연출하였다. 이번 과제에 반드시 추가해야하는 기능은 Light, Material, Camera 이다.
 ```
-push();
+  push();
   translate(mouseX-350, mouseY-350, 300-mouseY);
   camera.lookAt(20, 20, 0);
   camera.setPosition(sin(frameCount / 60) * 200, 0, 500);
