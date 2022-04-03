@@ -102,15 +102,26 @@ function touchEnded() {
 ```
 
 ## 설명
+기존 terrain 코드에 여러가지 변형을 주었다. 우선 cols,rows,scl,flying 변수값을 바꾸고, noStroke()을 추가하고, background() 값과 fill() 값을 바꾸어 바다를 연출하였다. 이번 과제에 반드시 추가해야하는 기능은 Light, Material, Camera 이다.
+```
+push();
+  translate(mouseX-350, mouseY-350, 300-mouseY);
+  camera.lookAt(20, 20, 0);
+  camera.setPosition(sin(frameCount / 60) * 200, 0, 500);
+  rotateX(4.3);
+  
+  normalMaterial();
+  ambientMaterial(150,30,30);
+  ambientLight(255);
+  torus(80, 20, 64, 64);
+  pop();
+```
+추가된 torus 도형 (도넛형) 에 nomalMaterial 값을 주고, ambientMaterial 값과, ambientLight 값을 주어서 빨간색 구조용 튜브를 구현했다. 위 코드에서 Material(조명의 영향을 받지 않음) 을 추가하고 거기에 ambientLgiht 값을 주었다. Material 은 추가된 3차원 도형에 재질에 영향을 주는 값이다. ambientLight 는 별도의 조명없이 캔버스에서 나오는 모든 조명을 뜻한다. ambientMaterial 은 ambientLight 아래에서 객체가 반사하는 색상을 정의한다. 
+
+그리고 Camera 이다. Camera 는 카메라 위치를 설정한다. 이 함수의 매개변수들은 카메라의 위치, 스케치의 중심(카메라가 가리키는 위치), 그리고 위쪽 방향(카메라의 오리엔테이션)을 정의한다. 이 값에 변화를 주어 좌우로 요동치는 환경을 만들었다.
 
 ## 최종 결과
-<video width="
-
 https://user-images.githubusercontent.com/50916731/161411325-a7874df7-1e4b-4522-bb3f-a5e827140a3c.mp4
-
-100%" height="100%" controls="controls">
-  <source src="/Processing/source/LightMaterialCamera.mp4" type="video/mp4">
-</video>
 
 ## 소감
 김동해 : 이 과제를 어떻게 시작하여 해결해야 할지 너무 막막했습니다. 하지만 훌륭하신 팀원 분들께서 어떻게 해결해야 할지 솔루션을 제공해주셨고, 질문에 친절히 대답해주셨습니다. 팀원분들의 아이디어를 보고 저렇게 생각할 수 있구나 매우 감탄하였습니다. 지금 만들어진 작품은 훌륭하신 팀장님과 팀원분들의 지혜와 열정, 협력이 아니었다면, 절대 만들어질 수 없었을 것입니다. 앞으로도 열심히 하여 성장하는 제 자신을 발견하고 싶습니다. 존경하는 심재창교수님, 그리고 컴퓨터그래픽스 파이팅! 
