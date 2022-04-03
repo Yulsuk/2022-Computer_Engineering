@@ -120,7 +120,7 @@ function touchEnded() {
 
 그리고 Camera 이다. Camera 는 카메라 위치를 설정한다. 이 함수의 매개변수들은 카메라의 위치, 스케치의 중심(카메라가 가리키는 위치), 그리고 위쪽 방향(카메라의 오리엔테이션)을 정의한다. 이 값에 변화를 주어 좌우로 요동치는 환경을 만들었다.
 
-추가로, IamgeA 와 ImageB 는 이미지 주소를 넣어주면 된다. 본 소스에는 이미지주소 길이가 너무 길어 가독성이 안좋아 ImageA 와 ImageB 로 대체하였다.
+추가로, fuctionStarted, functionEnded 에 이미지 주소는 마음대로 넣어주면 된다.
 
 ## 최종 결과
 https://user-images.githubusercontent.com/50916731/161411325-a7874df7-1e4b-4522-bb3f-a5e827140a3c.mp4
