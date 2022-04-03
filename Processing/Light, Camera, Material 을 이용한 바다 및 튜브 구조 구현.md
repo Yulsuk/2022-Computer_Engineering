@@ -105,7 +105,7 @@ function touchEnded() {
 
 ## 최종 결과
 <video width="100%" height="100%" controls="controls">
-  <source src="Processing/source/2022-04-03 12-51-40.mkv" type="video/mkv">
+  <source src="/Processing/source/2022-04-03 12-51-40.mkv" type="video/mkv">
 </video>
 
 ## 소감
